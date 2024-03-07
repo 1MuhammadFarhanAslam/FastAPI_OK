@@ -1,8 +1,10 @@
 from fastapi import HTTPException , Depends
-from app.hashing import hash_password, verify_hash
+import sys
+sys.path.append('../')
+from hashing import hash_password, verify_hash
 import re
 import os
-from app.models import Admin, SecretKey, AdminInfo
+from models import Admin, SecretKey, AdminInfo
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
