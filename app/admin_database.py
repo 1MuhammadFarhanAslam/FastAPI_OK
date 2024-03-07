@@ -1,5 +1,5 @@
 from fastapi import HTTPException , Depends
-from ..app.hashing import hash_password, verify_hash
+from app.hashing import hash_password, verify_hash
 import re
 import os
 from app.models import Admin, SecretKey, AdminInfo
